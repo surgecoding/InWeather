@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drk"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_card"
+        android:layout_width="0dp"
+        android:layout_height="600dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="#002A3B49"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true"
+
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00292929"
+                android:minHeight="66dp">
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+
+            <TextView
+                android:id="@+id/city_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="CITY"
+                android:textColor="@color/textcolor"
+                android:textSize="50sp"
+                app:fontFamily="@font/bowlby_one"></TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="424dp"
+                android:orientation="vertical"
+
+                >
+
+                <ImageView
+                    android:id="@+id/main_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_horizontal"></ImageView>
+
+
+                <TextView
+                    android:id="@+id/current_temp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="60"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/textcolor"
+                    android:textSize="250sp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    app:fontFamily="@font/advent_pro_thin"></TextView>
+
+                <TextView
+                    android:id="@+id/current_main"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:text="main"
+                    android:textColor="@color/textcolor"
+                    android:textSize="36sp"
+                    android:textStyle="italic"
+                    app:fontFamily="@font/autour_one"></TextView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_card" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

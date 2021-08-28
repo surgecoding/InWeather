@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#448AFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00292929"
+                android:minHeight="66dp">
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <TextView
+                android:id="@+id/city_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="@color/textcolor"
+                android:textSize="36sp"
+                app:fontFamily="@font/cairo_extralight"></TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/current_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="right|center_horizontal"
+                        android:text="90"
+                        android:textColor="@color/textcolor"
+                        android:textSize="94sp"
+                        app:fontFamily="@font/amaranth"></TextView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/main_pic"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_gravity="center_horizontal"></ImageView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/wind_direction_screen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="6dp"
+                        android:textColor="@color/textcolor"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/cairo_extralight"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/wind_speed_screen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/textcolor"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/cairo_extralight"></TextView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text=" m/s"
+                        android:textColor="@color/textcolor"
+                        android:textSize="18sp"
+                        app:fontFamily="@font/cairo_extralight"></TextView>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/current_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:paddingRight="30dp"
+                    android:textColor="@color/textcolor"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/cairo_extralight"></TextView>
+
+
+                <TextView
+                    android:id="@+id/current_main"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:ellipsize="marquee"
+                    android:gravity="center_horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/textcolor"
+                    android:textSize="24sp"
+                    app:fontFamily="@font/cairo_extralight"></TextView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_card" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
